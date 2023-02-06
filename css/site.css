@@ -5,6 +5,18 @@
     --dark: #1d1629;
     --dark-alt: #322B3E;
     --light: #f6e9ff;
+
+    --ff-title: 'Source Sans Pro', sans-serif;
+    --ff-logo: 'Permanent Marker', cursive; 
+    --ff-author: 'Kaushan Script', cursive;
+
+    --fw-400: 400;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+* {
+    font-family: var(--ff-title);
 }
 
 body {
@@ -14,14 +26,48 @@ body {
 
 nav {
     background-color: var(--dark-alt);
+    z-index: 100;
 }
 
 footer {
     background-color: var(--dark-alt);
+    z-index: 100;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2, h3, h4, h5, h6 {
     color: var(--primary-color);
+    font-weight: var(--fw-700);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: var(--fw-700);
+}
+
+h6 {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.navbar-brand > span {
+    font-family: var(--ff-logo);
+    color: var(--light);
+}
+
+.navbar-brand > span:hover {
+    color: var(--secondary-color);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(246, 233, 255, .55);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--light);
 }
 
 code[class*="language-"],
@@ -31,12 +77,36 @@ word-break: break-all;
 word-wrap: break-word;
 }
 
+.h3-border-bottom {
+    border-bottom: 1px solid var(--light);
+}
+
+.h-border {
+    border-right: 1px solid var(--light);
+}
+
+@media screen and (max-width: 991px){
+    .h-border {
+        border-right: none;
+    }
+}
+
+#btnSubmit {
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
 .code-title {
     border-bottom: 1px solid var(--light);
 }
 
-.code .col-lg-4 {
+.code .col-lg-5 {
     margin: .5rem 0;
+}
+
+.code-desc a {
+    color: var(--primary-color);
+    font-size: .8rem;
 }
 
 main>.container {
@@ -73,7 +143,7 @@ main>.container {
 }
 
 .checklist > li i {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .btn-outline-light {
@@ -83,10 +153,35 @@ main>.container {
 
 .btn-outline-light:hover {
     background-color: var(--light);
-    border-color: var(--light);
+    border-color: var(--primary-color);
     color: var(--dark);
 }
 
 .brand-icon{
     color: var(--secondary-color);
+}
+
+.table {
+    background-color: var(--light);
+    color: var(--dark);
+    margin: .5rem 0;
+}
+
+.Fizz,
+.Buzz,
+.Bizzbuzz {
+    font-size: 1.1rem;
+    font-weight: var(--fw-700);
+}
+
+.Fizz {
+    color: var(--primary-color);
+}
+
+.Buzz {
+    color: var(--secondary-color);
+}
+
+.FizzBuzz {
+    color: #db0007;
 }
